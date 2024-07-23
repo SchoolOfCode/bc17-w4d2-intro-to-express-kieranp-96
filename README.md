@@ -26,3 +26,24 @@ Customise your Express server:
 
 - Instead of sending the string with text "Hello World", send a JSON object with `message: 'Hello World'`.
 - Add multiple request handlers at different paths, sending different JSON responses.
+
+//import express ✅
+//call express into a variable ✅
+//store a port number into a variable✅
+//set app up to listen to port✅
+//express variable.method first param is the resource /user, /greeting ect second is a callback✅
+//callback contains a response and request✅
+//if successfull send response✅
+//if fail send an error ✅
+
+import express from 'express'
+const app = express();
+const port = 3000; app.listen(port)
+
+app.get('/', (req, res) => {
+// console.log(req) what is req usefull for?
+res.send("You need to find the correct /resource to go somewhere")
+})
+app.get('/greeting', (req, res) => {
+res.send("API call successful")
+})
